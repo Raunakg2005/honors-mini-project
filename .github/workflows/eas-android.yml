@@ -1,0 +1,36 @@
+name: Build Android APK and AAB
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          cache: 'npm'
+
+      - name: Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build APK (Preview Profile)
+        run: eas build --platform android --profile preview --non-interactive --no-wait
+
+      - name: Build AAB (Production Profile)
+        run: eas build --platform android --profile production --non-interactive --no-wait

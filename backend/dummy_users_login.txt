@@ -1,0 +1,228 @@
+LOGIN INFO FOR DUMMY USERS
+==========================
+
+Name: Joyce Shanahan
+Email: joyce.shanahan@example.com-1776360310295
+Password: password123
+Role: Central Response Orchestrator
+------------------------
+Name: Brent Rohan-Spencer
+Email: brent.rohan-spencer@example.com-1776360310303
+Password: password123
+Role: International Group Officer
+------------------------
+Name: Spencer Frami
+Email: spencer_frami80@example.com-1776360310307
+Password: password123
+Role: Legacy Division Designer
+------------------------
+Name: Lonzo Hamill
+Email: lonzo_hamill84@example.com-1776360310313
+Password: password123
+Role: Central Tactics Supervisor
+------------------------
+Name: Steven Marvin
+Email: steven_marvin76@example.com-1776360310318
+Password: password123
+Role: Direct Security Architect
+------------------------
+Name: Roosevelt Raynor
+Email: roosevelt.raynor97@example.com-1776360310323
+Password: password123
+Role: Product Quality Designer
+------------------------
+Name: Allan Crona
+Email: allan.crona19@example.com-1776360310328
+Password: password123
+Role: Regional Interactions Assistant
+------------------------
+Name: Oswald Walter
+Email: oswald.walter82@example.com-1776360310333
+Password: password123
+Role: Internal Accountability Developer
+------------------------
+Name: Andrea Hirthe
+Email: andrea_hirthe68@example.com-1776360310339
+Password: password123
+Role: Senior Research Orchestrator
+------------------------
+Name: Mose Koch-Ullrich
+Email: mose.koch-ullrich83@example.com-1776360310343
+Password: password123
+Role: International Configuration Liaison
+------------------------
+Name: Santos Nolan
+Email: santos.nolan2@example.com-1776360310348
+Password: password123
+Role: Direct Solutions Facilitator
+------------------------
+Name: Nellie Grant
+Email: nellie.grant37@example.com-1776360310352
+Password: password123
+Role: Forward Data Coordinator
+------------------------
+Name: Amelie Franey
+Email: amelie.franey@example.com-1776360310357
+Password: password123
+Role: National Communications Technician
+------------------------
+Name: Frida Wuckert
+Email: frida.wuckert@example.com-1776360310360
+Password: password123
+Role: Principal Branding Coordinator
+------------------------
+Name: Janet Reichel
+Email: janet.reichel4@example.com-1776360310364
+Password: password123
+Role: Regional Tactics Assistant
+------------------------
+Name: Margot Erdman
+Email: margot_erdman@example.com-1776360310368
+Password: password123
+Role: Corporate Usability Engineer
+------------------------
+Name: Mckenna Tromp
+Email: mckenna_tromp@example.com-1776360310372
+Password: password123
+Role: Forward Brand Administrator
+------------------------
+Name: Ella Schaden
+Email: ella_schaden5@example.com-1776360310377
+Password: password123
+Role: Senior Response Orchestrator
+------------------------
+Name: Jude Heathcote
+Email: jude_heathcote44@example.com-1776360310381
+Password: password123
+Role: Global Markets Executive
+------------------------
+Name: Lora Sipes
+Email: lora.sipes@example.com-1776360310386
+Password: password123
+Role: Senior Quality Associate
+------------------------
+Name: Megan Rohan
+Email: megan.rohan@example.com-1776360310390
+Password: password123
+Role: Central Metrics Producer
+------------------------
+Name: Audrey Stanton
+Email: audrey_stanton@example.com-1776360310394
+Password: password123
+Role: Internal Security Agent
+------------------------
+Name: Elsie Donnelly
+Email: elsie.donnelly8@example.com-1776360310398
+Password: password123
+Role: Regional Branding Planner
+------------------------
+Name: Roosevelt Little
+Email: roosevelt.little@example.com-1776360310402
+Password: password123
+Role: Central Program Coordinator
+------------------------
+Name: Neoma Heathcote
+Email: neoma_heathcote68@example.com-1776360310407
+Password: password123
+Role: Senior Applications Engineer
+------------------------
+Name: Earnest Bartell
+Email: earnest_bartell70@example.com-1776360310411
+Password: password123
+Role: Future Infrastructure Representative
+------------------------
+Name: Benny Collier
+Email: benny_collier82@example.com-1776360310415
+Password: password123
+Role: International Operations Planner
+------------------------
+Name: Petra Wilkinson
+Email: petra_wilkinson26@example.com-1776360310420
+Password: password123
+Role: Legacy Paradigm Designer
+------------------------
+Name: Angelo Kris
+Email: angelo.kris71@example.com-1776360310424
+Password: password123
+Role: Product Integration Developer
+------------------------
+Name: Candice Turcotte
+Email: candice.turcotte38@example.com-1776360310428
+Password: password123
+Role: Regional Identity Planner
+------------------------
+Name: Ibrahim Tillman
+Email: ibrahim_tillman@example.com-1776360310432
+Password: password123
+Role: Central Security Associate
+------------------------
+Name: Jeremy Rogahn
+Email: jeremy_rogahn@example.com-1776360310436
+Password: password123
+Role: Customer Integration Liaison
+------------------------
+Name: Dana Mertz
+Email: dana.mertz@example.com-1776360310440
+Password: password123
+Role: Corporate Marketing Developer
+------------------------
+Name: Bryan Kuvalis
+Email: bryan_kuvalis@example.com-1776360310444
+Password: password123
+Role: Dynamic Markets Technician
+------------------------
+Name: Gwendolyn Haley
+Email: gwendolyn.haley@example.com-1776360310448
+Password: password123
+Role: Future Security Architect
+------------------------
+Name: Bobby McLaughlin
+Email: bobby_mclaughlin@example.com-1776360310452
+Password: password123
+Role: Corporate Solutions Director
+------------------------
+Name: Ellen Dietrich
+Email: ellen_dietrich47@example.com-1776360310456
+Password: password123
+Role: Corporate Division Agent
+------------------------
+Name: Marcel Reichert
+Email: marcel_reichert@example.com-1776360310459
+Password: password123
+Role: Dynamic Assurance Designer
+------------------------
+Name: Teri Kling
+Email: teri_kling@example.com-1776360310463
+Password: password123
+Role: Central Directives Liaison
+------------------------
+Name: Opal Keebler
+Email: opal.keebler8@example.com-1776360310467
+Password: password123
+Role: Corporate Research Liaison
+------------------------
+Name: Robyn Weimann
+Email: robyn.weimann51@example.com-1776360310471
+Password: password123
+Role: National Accountability Supervisor
+------------------------
+Name: Josephine Langosh
+Email: josephine_langosh@example.com-1776360310475
+Password: password123
+Role: Lead Research Agent
+------------------------
+Name: Dena Ferry
+Email: dena_ferry@example.com-1776360310480
+Password: password123
+Role: Internal Usability Designer
+------------------------
+Name: Amara West
+Email: amara_west@example.com-1776360310484
+Password: password123
+Role: Customer Security Manager
+------------------------
+Name: Georgiana Brown
+Email: georgiana_brown62@example.com-1776360310488
+Password: password123
+Role: Internal Research Director
+------------------------

@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id               String       @id @default(uuid())
+  email            String       @unique
+  password         String
+  name             String
+  role             String       @default("Member")
+  location         String?
+  avatarUrl        String?
+  bio              String?
+  createdAt        DateTime     @default(now())
+  updatedAt        DateTime     @updatedAt
+  skills           String?
+  bannerUrl        String?
+  company          String?
+  education        String?
+  experience       String?
+  comments         Comment[]
+  connectedTo      Connection[] @relation("ConnectedUsers")
+  connections      Connection[] @relation("UserConnections")
+  likes            Like[]
+  messagesReceived Message[]    @relation("ReceivedMessages")
+  messagesSent     Message[]    @relation("SentMessages")
+  posts            Post[]
+  reposts          Repost[]
+}
+
+model OTP {
+  id        String   @id @default(uuid())
+  email     String
+  code      String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model Post {
+  id            String    @id @default(uuid())
+  content       String
+  imageUrl      String?
+  authorId      String
+  likesCount    Int       @default(0)
+  commentsCount Int       @default(0)
+  repostsCount  Int       @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  comments      Comment[]
+  likes         Like[]
+  author        User      @relation(fields: [authorId], references: [id])
+  reposts       Repost[]
+}
+
+model Message {
+  id         String   @id @default(uuid())
+  content    String
+  senderId   String
+  receiverId String
+  read       Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  receiver   User     @relation("ReceivedMessages", fields: [receiverId], references: [id])
+  sender     User     @relation("SentMessages", fields: [senderId], references: [id])
+}
+
+model Connection {
+  id          String   @id @default(uuid())
+  userId      String
+  connectedId String
+  status      String   @default("PENDING")
+  createdAt   DateTime @default(now())
+  connected   User     @relation("ConnectedUsers", fields: [connectedId], references: [id])
+  user        User     @relation("UserConnections", fields: [userId], references: [id])
+
+  @@unique([userId, connectedId])
+}
+
+model Like {
+  id        String   @id @default(uuid())
+  postId    String
+  userId    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  post      Post     @relation(fields: [postId], references: [id])
+
+  @@unique([postId, userId])
+}
+
+model Comment {
+  id        String   @id @default(uuid())
+  content   String
+  postId    String
+  userId    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  post      Post     @relation(fields: [postId], references: [id])
+}
+
+model Repost {
+  id        String   @id @default(uuid())
+  postId    String
+  userId    String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  post      Post     @relation(fields: [postId], references: [id])
+
+  @@unique([postId, userId])
+}
