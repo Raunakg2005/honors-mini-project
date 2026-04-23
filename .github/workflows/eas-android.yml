@@ -32,6 +32,10 @@ jobs:
 
       - name: Build APK (Preview Profile)
         run: eas build --platform android --profile preview --non-interactive --no-wait
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
 
       - name: Build AAB (Production Profile)
         run: eas build --platform android --profile production --non-interactive --no-wait
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
