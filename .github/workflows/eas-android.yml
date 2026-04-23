@@ -10,6 +10,8 @@ on:
 jobs:
   build-android:
     runs-on: ubuntu-latest
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,15 +29,37 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
           packager: npm
 
+      - name: Validate EXPO_TOKEN
+        run: |
+          if [ -z "$EXPO_TOKEN" ]; then
+            echo "Missing EXPO_TOKEN secret. Add it in: Settings > Secrets and variables > Actions"
+            exit 1
+          fi
+
       - name: Install Dependencies
         run: npm ci
 
-      - name: Build APK (Preview Profile)
-        run: eas build --platform android --profile preview --non-interactive --no-wait
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      - name: Build APK (Preview Profile) and Download
+        run: |
+          mkdir -p dist
+          eas build --platform android --profile preview --non-interactive --wait --json > apk-build.json
+          APK_URL=$(node -e "const fs=require('fs');const raw=fs.readFileSync('apk-build.json','utf8');const data=JSON.parse(raw);const build=Array.isArray(data)?data[0]:data;const url=build?.artifacts?.buildUrl||'';if(!url){console.error('No APK artifact URL found in build JSON');process.exit(1);}process.stdout.write(url);")
+          curl -L "$APK_URL" -o dist/app-preview.apk
 
-      - name: Build AAB (Production Profile)
-        run: eas build --platform android --profile production --non-interactive --no-wait
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      - name: Build AAB (Production Profile) and Download
+        run: |
+          eas build --platform android --profile production --non-interactive --wait --json > aab-build.json
+          AAB_URL=$(node -e "const fs=require('fs');const raw=fs.readFileSync('aab-build.json','utf8');const data=JSON.parse(raw);const build=Array.isArray(data)?data[0]:data;const url=build?.artifacts?.buildUrl||'';if(!url){console.error('No AAB artifact URL found in build JSON');process.exit(1);}process.stdout.write(url);")
+          curl -L "$AAB_URL" -o dist/app-production.aab
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk-preview
+          path: dist/app-preview.apk
+
+      - name: Upload AAB Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-aab-production
+          path: dist/app-production.aab
